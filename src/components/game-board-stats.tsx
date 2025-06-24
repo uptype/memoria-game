@@ -21,22 +21,27 @@ export function GameBoardStats({
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-2 text-violet-950">
           <BowArrowIcon />
-          <span className="font-semibold">Turns: {turns}</span>
+          <span className="font-semibold">
+            Turns: <b>{turns}</b>
+          </span>
         </div>
         <div className="flex items-center gap-2 text-violet-950">
           <TargetIcon />
           <span className="font-semibold">
-            Matched: {matchedPairs}/{totalPairs}
+            Matched:{' '}
+            <b>
+              {matchedPairs} / {totalPairs}
+            </b>
           </span>
         </div>
       </div>
 
       <div className="flex gap-3">
-        <Button onClick={onReset}>
+        <Button onClick={onReset} variant={'subtle'}>
           <RotateCcwIcon />
           Reset
         </Button>
-        <Button onClick={onQuit}>
+        <Button onClick={onQuit} variant={'subtle'}>
           <LogOutIcon />
           Quit
         </Button>

@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { GameBoard } from './components/game-board';
 import { GameBoardStats } from './components/game-board-stats';
 import { GameCompleted } from './components/game-completed';
+import { GameHelp } from './components/game-help';
 import { GameSetup } from './components/game-setup';
+import { GameTitle } from './components/game-title';
 import type { GameCard, GameState } from './types/game-types';
 import { createCards } from './utils/game-utils';
 
@@ -107,24 +109,25 @@ function App() {
   }, [gameState.flippedCards]);
 
   return (
-    <div className={'container mx-auto flex min-h-svh flex-col items-center gap-4 p-2'}>
-      <h1 className="mt-4 stroke-white font-extrabold text-gray-900 text-shadow-2xs text-shadow-violet-400">
-        MEMORiA
-      </h1>
-
-      <div
-        // rounded-lg border border-white/20 bg-white/10
-        className={`mb-4 flex-col items-center gap-2 p-4 text-center sm:max-w-9/12 ${gameInPlay ? 'hidden' : 'flex'}`}
-      >
-        <p>
-          Test your memory and concentration with this fun and simple game. Flip the cards to reveal
-          hidden numbers and try to find all the matching pairs of numbers in the fewest moves
-          possible.
-        </p>
-        <p className="font-bold">Ready to challenge your brain? Good luck!</p>
+    <div className={'container mx-auto flex min-h-svh flex-col items-center gap-8 px-4 py-2'}>
+      <div className={`${gameInPlay ? 'mt-2' : 'mt-16'} transition-all duration-200 ease-in`}>
+        <GameTitle />
       </div>
 
-      {!gameInPlay && <GameSetup onStartGame={startGame} buttonLabel="Play Game" />}
+      {!gameInPlay && (
+        <p
+          className={`font-sour-gummy mx-8 mb-4 text-center text-3xl leading-[1.3] font-bold text-violet-950 ${gameInPlay ? 'hidden' : 'block'}`}
+        >
+          Ready to challenge <span className="block md:inline">your brain?</span>
+        </p>
+      )}
+
+      {!gameInPlay && (
+        <>
+          <GameSetup onStartGame={startGame} buttonLabel="Start" />
+          <GameHelp />
+        </>
+      )}
 
       {gameInPlay && (
         <div className="flex w-full flex-col gap-4">
@@ -142,7 +145,6 @@ function App() {
           />
         </div>
       )}
-
       {gameState.isGameComplete && (
         <GameCompleted turns={gameState.turns} onReplay={resetGame} onExit={newGame} />
       )}

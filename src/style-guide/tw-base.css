@@ -5,39 +5,17 @@
   }
   body {
     @apply bg-background text-foreground from-background-from to-background-to min-h-screen w-full bg-linear-to-t;
+    /* font-family: 'Fruktur', system-ui; */
   }
 
-  /* Headings */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    /* font-family: var(--titleFontFamily); */
-    /* line-height: var(--smallLineHeight); */
-    @apply text-4xl font-bold;
-    margin-bottom: calc(
-      1.618vmin - 1vmax + 0.35em
-    ); /* increases margin as screen width gets smaller */
+  label {
+    @apply flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50;
   }
 
-  h1 {
-    @apply text-5xl font-extrabold;
+  ol {
+    @apply mx-6 list-decimal;
   }
-  h2 {
-    @apply text-4xl;
-  }
-  h3 {
-    @apply text-3xl;
-  }
-  h4 {
-    @apply text-2xl;
-  }
-  h5 {
-    @apply text-xl;
-  }
-  h6 {
-    @apply text-lg;
+  li {
+    @apply mt-2;
   }
 }

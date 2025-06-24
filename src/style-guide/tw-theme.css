@@ -1,6 +1,9 @@
 /* custom tailwind theme defs */
 @theme {
   /* --font-display: 'Satoshi', 'sans-serif'; */
+  --font-ggg: 'Fruktur', system-ui;
+  --font-sour-gummy: 'Sour Gummy', sans-serif;
+
   /* --breakpoint-3xl: 120rem; */
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -29,10 +32,10 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: var(--color-violet-50);
   /* <div className="h-screen w-full bg-linear-to-t from-[#30cfd0] to-[#330867]"> */
-  --background-from: var(--color-sky-600);
-  --background-to: var(--color-violet-600);
+  --background-from: var(--color-sky-400);
+  --background-to: var(--color-violet-700);
   --foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
@@ -45,15 +48,5 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
-}
-
-.dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
+  --ring: var(--color-fuchsia-500);
 }

@@ -23,7 +23,7 @@ export function GameBoardCard({ card, onClick, isDisabled }: GameBoardCardProps)
       >
         {/* Card Back */}
         <div className="absolute inset-0 h-full w-full backface-hidden">
-          <div className="flex h-full w-full items-center justify-center rounded-xl border-2 border-white/20 bg-gradient-to-br from-violet-700 via-purple-600 to-violet-900 text-5xl text-purple-950/40 shadow-lg">
+          <div className="flex h-full w-full items-center justify-center rounded-xl border-2 border-white/30 bg-gradient-to-br from-violet-700 via-purple-600 to-violet-900 text-5xl text-purple-950/70 shadow-lg">
             ?
           </div>
         </div>

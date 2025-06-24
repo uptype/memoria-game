@@ -4,7 +4,6 @@ import {
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
@@ -21,15 +20,16 @@ export function GameCompleted({ turns, message, onReplay, onExit }: GameComplete
   return (
     <>
       <AlertDialog open>
-        {/* <AlertDialogTrigger>Open</AlertDialogTrigger> */}
-
-        <AlertDialogContent>
+        <AlertDialogContent className="border-white/20 bg-violet-900">
           <AlertDialogHeader>
-            <AlertDialogTitle>Congratulations</AlertDialogTitle>
-            <AlertDialogDescription>{message || 'Well done! Nice work!'}</AlertDialogDescription>
+            <AlertDialogTitle className="text-3xl text-pink-100">Congratulations</AlertDialogTitle>
           </AlertDialogHeader>
 
-          <div className="mb-6 rounded-2xl bg-white/20 p-4 text-center">
+          <p className="text-center text-violet-200 sm:text-left">
+            {message || 'Well done! Nice work!'}
+          </p>
+
+          <div className="mb-6 rounded-2xl border border-white/20 bg-white/40 p-4 text-center">
             <p>Completed in {turns} turns</p>
           </div>
 
