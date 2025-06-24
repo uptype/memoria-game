@@ -5,6 +5,7 @@ interface GameBoardStatsProps {
   turns: number;
   matchedPairs: number;
   totalPairs: number;
+  flippedCardsLength: number;
   onReset: () => void;
   onQuit: () => void;
 }
@@ -13,6 +14,7 @@ export function GameBoardStats({
   turns,
   matchedPairs,
   totalPairs,
+  flippedCardsLength,
   onReset,
   onQuit,
 }: GameBoardStatsProps) {
@@ -37,7 +39,11 @@ export function GameBoardStats({
       </div>
 
       <div className="flex gap-3">
-        <Button onClick={onReset} variant={'subtle'}>
+        <Button
+          onClick={onReset}
+          variant={'subtle'}
+          disabled={turns === 0 && flippedCardsLength < 1}
+        >
           <RotateCcwIcon />
           Reset
         </Button>

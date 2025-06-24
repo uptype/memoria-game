@@ -4,13 +4,13 @@
 
 ## Tech Stack
 
-- **pnpm** – Fast, disk space efficient package manager
-- **Vite** – Blazing fast frontend build tool
-- **React** – The library for web and native user interfaces
-- **Tailwind CSS** – A utility-first CSS framework
-- **Lucide Icons** – Beautiful & consistent open-source icon set
-- **Radix UI** – An open source component library optimized for fast development, easy maintenance, and accessibility.
-- Inspiration from **[shadcn/ui](https://ui.shadcn.dev/)**
+- **[pnpm](https://pnpm.io)** – Fast, disk space efficient package manager
+- **[Vite](https://vite.dev)** – Blazing fast frontend build tool
+- **[React](https://react.dev)** – The library for web and native user interfaces
+- **[Tailwind CSS](https://tailwindcss.com)** – A utility-first CSS framework
+- **[Lucide Icons](https://lucide.dev)** – Beautiful & consistent open-source icon set
+- **[Radix UI Primitives](https://www.radix-ui.com/primitives)** – An open source component library optimized for fast development, easy maintenance, and accessibility.
+- Inspiration from **[shadcn/ui](https://ui.shadcn.com)**
 
 ## Getting Started
 
@@ -62,12 +62,3 @@ pnpm preview
 ## License
 
 This project is for the purpose of a coding challenge and is not licensed for production use. Feel free to reference or fork for educational purposes.
-
-## Acknowledgements
-
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [Lucide Icons](https://lucide.dev/)
-- [Radix UI](https://www.radix-ui.com/)
-- [shadcn/ui](https://ui.shadcn.dev/)

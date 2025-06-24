@@ -135,6 +135,7 @@ function App() {
             turns={gameState.turns}
             matchedPairs={gameState.matchedPairs}
             totalPairs={gameState.maxNumber}
+            flippedCardsLength={gameState.flippedCards.length}
             onReset={resetGame}
             onQuit={newGame}
           />
