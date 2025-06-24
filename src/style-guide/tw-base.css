@@ -5,7 +5,6 @@
   }
   body {
     @apply bg-background text-foreground from-background-from to-background-to min-h-screen w-full bg-linear-to-t;
-    /* font-family: 'Fruktur', system-ui; */
   }
 
   label {

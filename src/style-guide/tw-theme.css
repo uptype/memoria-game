@@ -1,7 +1,5 @@
 /* custom tailwind theme defs */
 @theme {
-  /* --font-display: 'Satoshi', 'sans-serif'; */
-  --font-ggg: 'Fruktur', system-ui;
   --font-sour-gummy: 'Sour Gummy', sans-serif;
 
   /* --breakpoint-3xl: 120rem; */

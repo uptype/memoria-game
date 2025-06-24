@@ -1,12 +1,7 @@
-/* add google fonts at top */
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+/* add google fonts before importing tailwind */
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&display=swap');
 
 @import 'tailwindcss';
 
 @import './style-guide/tw-theme.css';
 @import './style-guide/tw-base.css';
-
-@import './style-guide/tw-utilities.css';
-@import './style-guide/tw-components.css';

@@ -1,4 +1,0 @@
-/* custom tailwind utility styles */
-@utility flex-center {
-  @apply items-center justify-center;
-}

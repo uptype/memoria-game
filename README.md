@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# MEMORiA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<b>MEMORiA</b> is a classic card matching game that tests your memory and concentration.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **pnpm** – Fast, disk space efficient package manager
+- **Vite** – Blazing fast frontend build tool
+- **React** – The library for web and native user interfaces
+- **Tailwind CSS** – A utility-first CSS framework
+- **Lucide Icons** – Beautiful & consistent open-source icon set
+- **Radix UI** – An open source component library optimized for fast development, easy maintenance, and accessibility.
+- Inspiration from **[shadcn/ui](https://ui.shadcn.dev/)**
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow the steps below to set up and run the app locally.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/uptype/memoria-game.git
+cd memoria-game
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies with `pnpm`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Make sure you have [pnpm](https://pnpm.io/installation) installed:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install -g pnpm
 ```
+
+Then install dependencies:
+
+```bash
+pnpm install
+```
+
+### 3. Start the development server
+
+```bash
+pnpm dev
+```
+
+This will start the Vite development server at `http://localhost:5173/` (or another port if in use).
+
+### 4. Build for production
+
+```bash
+pnpm build
+```
+
+The output will be in the `dist/` directory.
+
+### 5. Preview the production build locally
+
+```bash
+pnpm preview
+```
+
+## License
+
+This project is for the purpose of a coding challenge and is not licensed for production use. Feel free to reference or fork for educational purposes.
+
+## Acknowledgements
+
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [Lucide Icons](https://lucide.dev/)
+- [Radix UI](https://www.radix-ui.com/)
+- [shadcn/ui](https://ui.shadcn.dev/)

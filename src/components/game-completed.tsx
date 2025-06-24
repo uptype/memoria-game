@@ -1,4 +1,3 @@
-import { LogOutIcon, RotateCcwIcon } from 'lucide-react';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -20,26 +19,26 @@ export function GameCompleted({ turns, message, onReplay, onExit }: GameComplete
   return (
     <>
       <AlertDialog open>
-        <AlertDialogContent className="border-white/20 bg-violet-900">
+        <AlertDialogContent className="border-white/20 bg-violet-800">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-3xl text-pink-100">Congratulations</AlertDialogTitle>
+            <AlertDialogTitle className="text-3xl text-pink-100 text-shadow-lg text-shadow-violet-950">
+              Congratulations
+            </AlertDialogTitle>
           </AlertDialogHeader>
 
-          <p className="text-center text-violet-200 sm:text-left">
+          <p className="text-center text-violet-100 sm:text-left">
             {message || 'Well done! Nice work!'}
           </p>
 
           <div className="mb-6 rounded-2xl border border-white/20 bg-white/40 p-4 text-center">
-            <p>Completed in {turns} turns</p>
+            <p className="font-bold">Completed in {turns} turns</p>
           </div>
 
           <AlertDialogFooter>
-            <AlertDialogCancel type="button" onClick={onExit}>
-              <LogOutIcon />
+            <AlertDialogCancel type="button" onClick={onExit} className="bg-violet-200">
               Exit
             </AlertDialogCancel>
             <AlertDialogAction type="button" onClick={onReplay}>
-              <RotateCcwIcon />
               Replay
             </AlertDialogAction>
           </AlertDialogFooter>
