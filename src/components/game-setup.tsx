@@ -30,7 +30,7 @@ export function GameSetup({ onStartGame, buttonLabel }: GameSetupProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>{buttonLabel || 'Play'}</Button>
+        <Button className="min-w-40">{buttonLabel || 'Play'}</Button>
       </DialogTrigger>
 
       <DialogContent>

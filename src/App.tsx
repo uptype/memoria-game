@@ -107,14 +107,27 @@ function App() {
   }, [gameState.flippedCards]);
 
   return (
-    <div className="h-screen w-full bg-linear-to-t from-gray-50 to-gray-500">
-      <h1 className="text-4xl font-extrabold">MEMORiA</h1>
-      <p className="mb-4">Test your memory by matching the pairs of numbers.</p>
+    <div className={'container mx-auto flex min-h-svh flex-col items-center gap-4 p-2'}>
+      <h1 className="mt-4 stroke-white font-extrabold text-gray-900 text-shadow-2xs text-shadow-violet-400">
+        MEMORiA
+      </h1>
+
+      <div
+        // rounded-lg border border-white/20 bg-white/10
+        className={`mb-4 flex-col items-center gap-2 p-4 text-center sm:max-w-9/12 ${gameInPlay ? 'hidden' : 'flex'}`}
+      >
+        <p>
+          Test your memory and concentration with this fun and simple game. Flip the cards to reveal
+          hidden numbers and try to find all the matching pairs of numbers in the fewest moves
+          possible.
+        </p>
+        <p className="font-bold">Ready to challenge your brain? Good luck!</p>
+      </div>
 
       {!gameInPlay && <GameSetup onStartGame={startGame} buttonLabel="Play Game" />}
 
       {gameInPlay && (
-        <div className="flex flex-col gap-4">
+        <div className="flex w-full flex-col gap-4">
           <GameBoardStats
             turns={gameState.turns}
             matchedPairs={gameState.matchedPairs}

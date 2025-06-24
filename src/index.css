@@ -1,8 +1,7 @@
 @import 'tailwindcss';
 
-@import './tw-theme.css';
+@import './style-guide/tw-theme.css';
+@import './style-guide/tw-base.css';
 
-@import './tw-base.css';
-/* @import './tw-utilities.css'; */
-/* @import './tw-components.css'; */
-/* @import './tw-animations.css'; */
+@import './style-guide/tw-utilities.css';
+@import './style-guide/tw-components.css';

@@ -1,4 +1,5 @@
 import { BowArrowIcon, LogOutIcon, RotateCcwIcon, TargetIcon } from 'lucide-react';
+import { Button } from './button';
 
 interface GameBoardStatsProps {
   turns: number;
@@ -16,13 +17,13 @@ export function GameBoardStats({
   onQuit,
 }: GameBoardStatsProps) {
   return (
-    <div className="flex flex-col items-center justify-between gap-4 rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm sm:flex-row">
+    <div className="flex flex-col items-center justify-between gap-4 rounded-2xl border border-white/20 bg-white/20 p-4 backdrop-blur-sm sm:flex-row">
       <div className="flex items-center gap-6">
-        <div className="flex items-center gap-2 text-white">
+        <div className="flex items-center gap-2 text-violet-950">
           <BowArrowIcon />
           <span className="font-semibold">Turns: {turns}</span>
         </div>
-        <div className="flex items-center gap-2 text-white">
+        <div className="flex items-center gap-2 text-violet-950">
           <TargetIcon />
           <span className="font-semibold">
             Matched: {matchedPairs}/{totalPairs}
@@ -31,20 +32,14 @@ export function GameBoardStats({
       </div>
 
       <div className="flex gap-3">
-        <button
-          onClick={onReset}
-          className="flex items-center gap-2 rounded-xl bg-white/20 px-4 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-white/30 active:scale-95"
-        >
+        <Button onClick={onReset}>
           <RotateCcwIcon />
           Reset
-        </button>
-        <button
-          onClick={onQuit}
-          className="flex items-center gap-2 rounded-xl bg-white/20 px-4 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-white/30 active:scale-95"
-        >
+        </Button>
+        <Button onClick={onQuit}>
           <LogOutIcon />
           Quit
-        </button>
+        </Button>
       </div>
     </div>
   );

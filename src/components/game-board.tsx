@@ -9,7 +9,7 @@ interface GameBoardProps {
 
 export function GameBoard({ cards, onCardClick, isBoardDisabled }: GameBoardProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-4">
+    <div className="mt-2 flex flex-wrap justify-center gap-2 sm:gap-4">
       {cards.map((card) => (
         <GameBoardCard
           key={card.id}

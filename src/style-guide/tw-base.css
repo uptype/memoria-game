@@ -4,7 +4,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground from-background-from to-background-to min-h-screen w-full bg-linear-to-t;
   }
 
   /* Headings */

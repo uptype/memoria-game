@@ -1,10 +1,5 @@
 /* custom tailwind component styles */
 @layer components {
-  /* inputs */
-  .gu-input {
-    @apply m-10 rounded-lg bg-red-200;
-  }
-
   /* cards */
   .card {
     background-color: var(--color-white);

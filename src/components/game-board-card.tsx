@@ -14,20 +14,16 @@ export function GameBoardCard({ card, onClick, isDisabled }: GameBoardCardProps)
   };
 
   return (
-    // <div className="flex justify-center border-gray-900 bg-gray-700 p-3 align-middle text-3xl text-gray-50">
-    //   {card.number}
-    // </div>
-
     <div
       className={`relative min-h-20 min-w-20 flex-initial cursor-pointer transition-all duration-300 ${isDisabled || card.isMatched ? 'cursor-not-allowed' : 'hover:scale-105'} ${card.isMatched ? 'opacity-75' : ''} `}
       onClick={handleClick}
     >
       <div
-        className={`transform-style-preserve-3d relative h-full w-full transition-transform duration-500 ${card.isFlipped || card.isMatched ? 'rotate-y-180' : ''} `}
+        className={`relative h-full w-full transition-transform duration-400 transform-3d ${card.isFlipped || card.isMatched ? 'rotate-y-180' : ''} `}
       >
         {/* Card Back */}
         <div className="absolute inset-0 h-full w-full backface-hidden">
-          <div className="flex h-full w-full items-center justify-center rounded-xl border-2 border-white/20 bg-gradient-to-br from-gray-900 via-gray-600 to-gray-800 text-5xl text-gray-800/70 shadow-lg">
+          <div className="flex h-full w-full items-center justify-center rounded-xl border-2 border-white/20 bg-gradient-to-br from-violet-700 via-purple-600 to-violet-900 text-5xl text-purple-950/40 shadow-lg">
             ?
           </div>
         </div>
@@ -36,7 +32,7 @@ export function GameBoardCard({ card, onClick, isDisabled }: GameBoardCardProps)
         <div className="absolute inset-0 h-full w-full rotate-y-180 backface-hidden">
           <div
             className={`flex h-full w-full items-center justify-center rounded-xl border-2 border-white/40 text-2xl font-bold shadow-lg ${
-              card.isMatched ? 'bg-green-400 text-white' : 'bg-white text-gray-800'
+              card.isMatched ? 'bg-green-500 text-white' : 'bg-violet-300 text-violet-900'
             } `}
           >
             {card.number}

@@ -23,13 +23,13 @@ export function GameCompleted({ turns, message, onReplay, onExit }: GameComplete
       <AlertDialog open>
         {/* <AlertDialogTrigger>Open</AlertDialogTrigger> */}
 
-        <AlertDialogContent className="border-gray-600 bg-gray-400">
+        <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Congratulations</AlertDialogTitle>
             <AlertDialogDescription>{message || 'Well done! Nice work!'}</AlertDialogDescription>
           </AlertDialogHeader>
 
-          <div className="mb-6 rounded-2xl bg-white/20 p-4">
+          <div className="mb-6 rounded-2xl bg-white/20 p-4 text-center">
             <p>Completed in {turns} turns</p>
           </div>
 
