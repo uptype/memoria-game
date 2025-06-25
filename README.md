@@ -14,6 +14,12 @@
 - **[Radix UI Primitives](https://www.radix-ui.com/primitives)** – An open source component library optimized for fast development, easy maintenance, and accessibility.
 - Inspiration from **[shadcn/ui](https://ui.shadcn.com)**
 
+## Live Demo
+
+You can view a live version of the app here:
+
+👉 [**MEMORiA - Live Demo**](http://memoria.greguptondesign.com/)
+
 ## Getting Started
 
 Follow the steps below to set up and run the app locally.

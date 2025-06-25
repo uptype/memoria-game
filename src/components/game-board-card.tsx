@@ -15,7 +15,7 @@ export function GameBoardCard({ card, onClick, isDisabled }: GameBoardCardProps)
 
   return (
     <div
-      className={`relative min-h-20 min-w-20 flex-initial transition-all duration-300 ${isDisabled || card.isMatched ? 'cursor-progress opacity-75' : 'cursor-pointer hover:scale-105'} ${card.isMatched ? 'opacity-75' : ''} `}
+      className={`relative min-h-20 min-w-20 flex-initial transition-all duration-300 ${isDisabled || card.isMatched ? 'opacity-75' : 'cursor-pointer hover:scale-105'} ${card.isMatched ? 'cursor-default' : ''} ${isDisabled ? 'cursor-progress' : ''}`}
       onClick={handleClick}
     >
       <div
