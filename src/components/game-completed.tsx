@@ -1,8 +1,10 @@
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
+  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
@@ -23,6 +25,9 @@ export function GameCompleted({ turns, message, onReplay, onExit }: GameComplete
           <AlertDialogTitle className="text-3xl text-pink-100 text-shadow-lg text-shadow-violet-950">
             Congratulations
           </AlertDialogTitle>
+          <VisuallyHidden>
+            <AlertDialogDescription>Completed in {turns} turns.</AlertDialogDescription>
+          </VisuallyHidden>
         </AlertDialogHeader>
 
         <p className="text-center text-violet-100 sm:text-left">

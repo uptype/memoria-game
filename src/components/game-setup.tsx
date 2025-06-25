@@ -37,35 +37,36 @@ export function GameSetup({ onStartGame, buttonLabel }: GameSetupProps) {
         </Button>
       </DialogTrigger>
 
-      <DialogContent>
+      <DialogContent aria-describedby={undefined}>
         <DialogHeader>
           <DialogTitle>Setup Your Game</DialogTitle>
-          <p>Enter the number of pairs you would like to try and match.</p>
-
-          <form onSubmit={handleSubmit} className="mt-4 space-y-8">
-            <div className="flex flex-col gap-2">
-              <label>Number of Pairs</label>
-              <Input
-                type="number"
-                placeholder="Enter number"
-                value={numberOfpairs}
-                min={1}
-                onChange={(e) => setNumberOfpairs(parseInt(e.target.value))}
-              />
-              <p className="text-sm text-violet-950">
-                This will create a game with {numberOfpairs} matching pairs ({numberOfpairs * 2}{' '}
-                total cards)
-              </p>
-            </div>
-
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button variant="outline">Cancel</Button>
-              </DialogClose>
-              <Button type="submit">Play Game</Button>
-            </DialogFooter>
-          </form>
         </DialogHeader>
+
+        <p>Enter the number of pairs you would like to try and match.</p>
+
+        <form onSubmit={handleSubmit} className="mt-4 space-y-8">
+          <div className="flex flex-col gap-2">
+            <label>Number of Pairs</label>
+            <Input
+              type="number"
+              placeholder="Enter number"
+              value={numberOfpairs}
+              min={1}
+              onChange={(e) => setNumberOfpairs(parseInt(e.target.value))}
+            />
+            <p className="text-sm text-violet-950">
+              This will create a game with {numberOfpairs} matching pairs ({numberOfpairs * 2} total
+              cards)
+            </p>
+          </div>
+
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </DialogClose>
+            <Button type="submit">Play Game</Button>
+          </DialogFooter>
+        </form>
       </DialogContent>
     </Dialog>
   );
