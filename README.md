@@ -2,6 +2,8 @@
 
 <b>MEMORiA</b> is a classic card matching game that tests your memory and concentration.
 
+![MEMORiA number matching game](https://github.com/uptype/memoria-game/blob/main/public/memoria-game-screen.png?raw=true)
+
 ## Tech Stack
 
 - **[pnpm](https://pnpm.io)** – Fast, disk space efficient package manager
